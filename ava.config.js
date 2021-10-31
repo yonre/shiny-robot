@@ -1,4 +1,4 @@
 export default {
-  timeout: '100s',
-  verbose: true,
+  timeout: '10000000s',
+  verbose: false,
 }
