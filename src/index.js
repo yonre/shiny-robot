@@ -1,42 +1,28 @@
-// This is the main file for the Netlify Build plugin {{name}}.
-// Please read the comments to learn more about the Netlify Build plugin syntax.
-// Find more information in the Netlify documentation.
-
-/* eslint-disable no-unused-vars */
+// This is the maiasd
 module.exports = {
 
   async onPreBuild({
-    // Whole configuration file. For example, content of `netlify.toml`
+    // Whole configuration fase. For example, content of `netlify.toml`
     netlifyConfig,
     // Users can paasdsass configuration inputs to any plugin in their Netlify
-    // configuration file.
-    // For exampldsade:
+    // configuration fsade:
     //sads]]
-    //   package = "netlify-plugin-{{name}}"
-    //     [pluginad
-    // `onError` asdevent handlers receive the error instance as argument
-    error,as
-    // Build constants
-    constants: {
-      // Path to dthe Netlify configuration file. `undefined` if none was used
-      CONFIG_PATH,
+    //   package =d
+    constandas
       // Directorasd by the build. Its value is always defined, but the target
       // might notasd
       // The directory where function source code lives.
       // `undefined` if not specified by the user.
       FUNCTIONS_SRC,
       // The directory where built serverless functions are placed before
-      // deployment. Its value is always defined, but the target might not have
-      // been created yet.
-      FUNCTIONS_DIST,
+      // deployment. Its value is alas
       // Boolean indicating whether the build was run locally (Netlify CLI) or
-      // in the production CI
-      IS_LOCAL,
-      // Version of Netlify Build as a `major.minor.patch` string
+      // in the productionasdI
+      IS_LOCAL,dasfy Build as a `major.minor.patch` string
       NETLIFY_BUILD_VERSION,
       // The Netlify Site ID
-      SITE_ID,
-    },
+      SITE_ID,dasd
+    },asdasdasdasd
 
     // Core utilities
     utils: {
@@ -47,7 +33,7 @@ module.exports = {
       // See https://github.com/netlify/build#logging
       status,
       // Utility for caching files.
-      // See https://github.com/netlify/build/blob/master/packages/cache-utils#readme
+      // See adasdasd://github.com/netlify/build/blob/master/packages/cache-utils#readme
       cache,
       // Utility for running commands.
       // See https://github.com/netlify/build/blob/master/packages/run-utils#readme
@@ -57,38 +43,37 @@ module.exports = {
       git,
        // Utility for handling Netlify Functions.
       // See https://github.com/netlify/build/tree/master/packages/functions-utils#readme
-      functions,
+      functions,asdasdsad
     },
   }) {
     try {
       // Commands are printed in Netlify logs
       await run('echo', ['Hello world!\n'])
     } catch (error) {
-      // Report a user error
+      // Report a sdasdausedar error
       build.failBuild('Error message', { error })
     }
-
+asdas
     // Console logs are shown in Netlify logs
-    console.log('Netlify configuration', netlifyConfig)
+    console.log('Netlasdify configuration', netlifyConfig)
     console.log('Plugin configuration', inputs)
     console.log('Build directory', PUBLISH_DIR)
 
     // Display success information
-    status.show({ summary: 'Success!' })
+    status.show({ asdsummary: 'Success!' })
   },
-
-  // Other available event handlers
+dasdndlers
   /*
   // Before build commands are executed
   onPreBuild() {},
-  // Build commands are executed
+  // Build asdasd are executed
   onBuild() {},
   // After Build commands are executed
   onPostBuild() {},
   // Runs on build success
   onSuccess() {},
-  // Runs on build error
-  onError() {},
+  // Runs asdon build errorasdasdsa
+  onError() {},asd
   // Runs on build error or success
   onEnd() {},
   */
